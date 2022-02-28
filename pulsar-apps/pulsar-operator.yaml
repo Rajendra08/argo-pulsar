@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pulsar-operator
+spec:
+  destination:
+    name: ''
+    namespace: sn-pf
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: ''
+    repoURL: 'https://charts.streamnative.io'
+    targetRevision: 0.8.23
+    chart: pulsar-operator
+  project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+    syncOptions:
+      - Validate=false
+      - CreateNamespace=true
+
