@@ -16,11 +16,3 @@ spec:
     targetRevision: 0.8.23
     chart: pulsar-operator
   project: default
-  syncPolicy:
-    automated:
-      prune: false
-      selfHeal: false
-    syncOptions:
-      - Validate=false
-      - CreateNamespace=true
-
