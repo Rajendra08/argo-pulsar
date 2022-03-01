@@ -2,13 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: pulsar-cluster
-  namespace: argocd 
+  namespace: pulsar 
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     name: ''
-    namespace: argocd
+    namespace: pulsar
     server: 'https://kubernetes.default.svc'
   source:
     path: ''
